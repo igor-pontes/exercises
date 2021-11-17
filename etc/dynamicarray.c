@@ -13,7 +13,7 @@ void initArray(Array* a, size_t size){
 
 void insertArray(Array* a, const char* s){
 	
-	if(a->used > a->size){
+	if(a->used == a->size){
 		a->size++;
 		a->array = realloc(a->array, a->size * sizeof(int *));
 	}
