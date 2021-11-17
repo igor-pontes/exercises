@@ -1,0 +1,15 @@
+-> A branch in programming is something like a "if" statement, switch statement,
+conditional operator, etc.
+-> A branch occurs whenever the cpu has more than one path that it can take.
+-> Usually the CPU just executes one statement after another, but a branch occurs when 
+there's a condition and the CPU could potentially take one of two paths.
+-> The reason that that's slow is because the CPU actually tries to stay ahead of where it's 
+got to execute.
+-> The CPU doesn't know which instructions to load and what it does is it 
+guesses, It guesses which path to load and loads a bunch of instructions which
+might be the instructions that it needs to execute, but on the other hand, 
+It might actually be the wrong instructions (CPU will flush all of those instructions out
+and it'll have to read the real path).
+-> That flushing of the wrong path and the loading of the right real path actually
+takes a lot of time (really slow but we can't perceive it because of how fast
+CPUs are nowadays).
