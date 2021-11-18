@@ -2,7 +2,6 @@
 #include <dynamicarray.h>
 #include <string.h>
 #include <stdlib.h>
-#include <stdio.h>
 
 void initArray(Array* a, size_t size){
 	assert(size>0);
