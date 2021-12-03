@@ -11,28 +11,28 @@ def main():
     o = [x for x in l]
     c = [x for x in l]
 
-    while(len(o) != 1):
-        for y in range(0,len(l[0])):
-            if(len(o) == 1):
-                break
-            r = []
-            for x in o:
-                if int(x[y]) != maxcb([x[y] for x in o]):
-                    r.append(x)
-        
-            rmv(o, r)
+    
+    for y in range(0,len(l[0])):
+        if(len(o) == 1):
+            break
+        r = []
+        for x in o:
+            if int(x[y]) != maxcb([x[y] for x in o]):
+                r.append(x)
+    
+        rmv(o, r)
    
-    while(len(c) != 1):
-        for y in range(0,len(l[0])):
-            if(len(c) == 1):
-                break
-            r = []
-            
-            for x in c:
-                if int(x[y]) != mincb([x[y] for x in c]):
-                    r.append(x)
-            
-            rmv(c, r)
+    
+    for y in range(0,len(l[0])):
+        if(len(c) == 1):
+            break
+        r = []
+        
+        for x in c:
+            if int(x[y]) != mincb([x[y] for x in c]):
+                r.append(x)
+        
+        rmv(c, r)
 
     o = int(o[0],2) 
     c = int(c[0],2)
@@ -43,4 +43,3 @@ def rmv(lst, rm):
         lst.remove(x)
 
 main()
-
