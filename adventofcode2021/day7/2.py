@@ -1,3 +1,5 @@
+#Use Arithmetic Progression !
+
 def main(i):
     i = "input.txt" if i == 1 else "test.txt"
     crabs = None
@@ -8,10 +10,8 @@ def main(i):
     while True:
         temp = 0
         for crab in crabs:
-            steps = 0
-            for c in range(0, abs(h-crab)+1):
-                steps += c
-            temp += steps
+            n = abs(crab-h)
+            temp += int(n*(1+n)/2)
         if temp < fuel:
             h += 1
             fuel = temp
