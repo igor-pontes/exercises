@@ -24,8 +24,7 @@ def main():
     for signal in signals:
         segments = {x:'' for x in char_range('a','g')} 
         signal_pattern(signal[0], segments)
-        number = signal_output(signal[1], numbers_map, segments)
-        total += number
+        total += signal_output(signal[1], numbers_map, segments)
     print(total)
     
 def signal_output(signal, numbers_map, segments):
