@@ -11,10 +11,10 @@ def main():
                 caves.append(temp[::-1])
     for s in start_caves:
         paths = ["start"]
-        find_paths(s, "start", paths)
+        find_paths(s, paths)
     print(counter) 
 
-def find_paths(current, past, paths):
+def find_paths(current, paths):
     global counter, caves
     if current == "end":
         paths.append("end")
@@ -35,7 +35,7 @@ def find_paths(current, past, paths):
     for c in caves:
         if c[0] == current:
             temp = [x for x in paths]
-            find_paths(c[1], current, temp)
+            find_paths(c[1], temp)
     return 
 
 main()
