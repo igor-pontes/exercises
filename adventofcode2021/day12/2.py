@@ -1,8 +1,8 @@
 counter = 0
-start_caves = []
 caves = [] 
 def main():
-    global start_caves, caves, counter
+    global caves, counter
+    start_caves = []
     with open('input.txt', 'r') as file:
         while line := file.readline():
             temp = start_caves.append(line[:-1].split("-")[0] if line[:-1].split("-")[0] != "start" else line[:-1].split("-")[1]) if line[:-1].split("-")[0] == "start" or line[:-1].split("-")[1] == "start" else caves.append((line[:-1].split("-")[0], "end")) if line[:-1].split("-")[1] == "end" else caves.append((line[:-1].split("-")[1], "end")) if line[:-1].split("-")[0] == "end" else (line[:-1].split("-")[0], line[:-1].split("-")[1])
