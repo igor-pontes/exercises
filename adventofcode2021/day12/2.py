@@ -25,6 +25,7 @@ def find_paths(current, past, paths):
         for c in paths:
             if c.islower() and paths.count(c) == 2:
                 n = 1
+                break
         if paths.count(current) < n:
             paths.append(current)
         else:
