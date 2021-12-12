@@ -1,7 +1,7 @@
 flashes = 0
 directions = {(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)}
 octopodes = []
-def main(steps):
+def main():
     global octopodes, flashes
     with open('input.txt', 'r') as file:
         while line := file.readline():
@@ -13,7 +13,6 @@ def main(steps):
         if check(octopodes):
             print(s)
             break
-        
 
 def check(octopodes):
     visited = []
@@ -50,4 +49,4 @@ def step(octopodes):
         for column in range(len(octopodes[row])):
             octopodes[row][column] += 1
 
-main(100)
+main()
