@@ -6,7 +6,7 @@ def main():
     with open('input.txt', 'r') as file:
         while line := file.readline():
             temp = start_caves.append(line[:-1].split("-")[0] if line[:-1].split("-")[0] != "start" else line[:-1].split("-")[1]) if line[:-1].split("-")[0] == "start" or line[:-1].split("-")[1] == "start" else caves.append((line[:-1].split("-")[0], "end")) if line[:-1].split("-")[1] == "end" else caves.append((line[:-1].split("-")[1], "end")) if line[:-1].split("-")[0] == "end" else (line[:-1].split("-")[0], line[:-1].split("-")[1])
-            if temp != None:
+            if temp is not None:
                 caves.append(temp)
                 caves.append(temp[::-1])
     for s in start_caves:
@@ -15,7 +15,7 @@ def main():
     print(counter) 
 
 def find_paths(current, past, paths):
-    global counter, start_caves, caves
+    global counter, caves
     if current == "end":
         paths.append("end")
         counter += 1
