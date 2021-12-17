@@ -1,5 +1,4 @@
 # A* Part 2
-from math import sqrt
 def main():
     directions = {(1, 0), (0, 1), (-1, 0), (0, -1)}
     cave = []
